@@ -30,3 +30,30 @@ rails db:create
 se o servidor travar
 rm tmp/pids/server.pid
  bin/rails restart
+
+bin/rails generate model Contact \
+  name:string \
+  phone:string \
+  email:string \
+  company:string \
+  position:string \
+  birthdate:date \
+  notes:text \
+  avatar:string
+
+bin/rails db:migrate
+
+bin/rails generate controller Contacts index show new edit
+
+rails routes  
+
+bin/rails generate model User \
+  name:string \
+  email:string \
+  password_digest:string
+
+bin/rails db:migrate
+
+gem "bcrypt", "~> 3.1.7"
+
+bundle install
