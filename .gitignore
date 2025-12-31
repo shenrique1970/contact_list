@@ -10,6 +10,11 @@ capybara-*.html
 *.orig
 rerun.txt
 pickle-email-*.html
+.kamal
+/.kamal
+.kamal/
+.github/
+/.github/
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -52,6 +57,7 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+/node_modules/
 
 # Ignore precompiled javascript packs
 /public/packs
