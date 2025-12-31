@@ -26,3 +26,7 @@ Things you may want to cover:
 rails new contact_list -d postgresql
 
 rails db:create
+
+se o servidor travar
+rm tmp/pids/server.pid
+ bin/rails restart
