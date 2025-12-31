@@ -10,11 +10,10 @@ capybara-*.html
 *.orig
 rerun.txt
 pickle-email-*.html
-.kamal
-/.kamal
+
 .kamal/
+.gitignore
 .github/
-/.github/
 
 # Ignore all logfiles and tempfiles.
 /log/*
