@@ -1,11 +1,11 @@
 <% content_for :title, "Página Home" %>
-<div class="jumbotron">
-  <h1>Contact List</h1>
-  <p>
+
+<div class="bg-light p-5 rounded text-center">
+  <h1 class="display-4">Contact List</h1>
+  <p class="lead">
     Gerencie seus contatos em qualquer lugar!
   </p>
   <p>
-    <a href="#" class="btn btn-primary btn-lg">Crie sua conta!</a>
+    <%= link_to "Crie sua conta!", cadastro_path, class: "btn btn-primary btn-lg" %>
   </p>
 </div>
-
