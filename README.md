@@ -22,6 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<img width="1365" height="650" alt="contact_list" src="https://github.com/user-attachments/assets/2342eb28-4daa-4c9c-a866-ecc0b6d40cdd" />
 
 rails new contact_list -d postgresql
 
