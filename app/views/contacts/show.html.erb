@@ -1,2 +1,29 @@
-<h1>Contacts#show</h1>
-<p>Find me in app/views/contacts/show.html.erb</p>
+<div class="container mt-4">
+  <h2>Detalhes do Contato</h2>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>Nome</th>
+      <td><%= @contact.name %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= @contact.email %></td>
+    </tr>
+    <tr>
+      <th>Telefone</th>
+      <td><%= @contact.phone %></td>
+    </tr>
+    <tr>
+      <th>Empresa</th>
+      <td><%= @contact.company %></td>
+    </tr>
+    <tr>
+      <th>Cargo</th>
+      <td><%= @contact.position %></td>
+    </tr>
+  </table>
+
+  <%= link_to "Editar", edit_contact_path(@contact), class: "btn btn-warning" %>
+  <%= link_to "Voltar", contacts_path, class: "btn btn-secondary" %>
+</div>

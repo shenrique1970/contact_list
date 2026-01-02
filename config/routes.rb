@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get "users/new"
-  get "users/create"
-  get "users/edit"
-  get "users/update"
-  get "users/show"
   # Health check
   get "up" => "rails/health#show", as: :rails_health_check
 
@@ -19,11 +14,8 @@ Rails.application.routes.draw do
   post "entrar", to: "sessions#create"
   delete "sair", to: "sessions#destroy"
 
-  # Recursos
-  resources :users, only: [ :show, :new, :create, :edit, :update ] do
-    resources :contacts, only: [ :index, :new, :create, :edit, :update, :destroy ]
-  end
-
-  resources :sessions, only: [ :new, :create, :destroy ]
+  # Recursos principais
+  resources :users, only: [ :show, :new, :create, :edit, :update ]
   resources :contacts
+  resources :sessions, only: [ :new, :create, :destroy ]
 end

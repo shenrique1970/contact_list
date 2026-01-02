@@ -1,5 +1,7 @@
 <div class="container mb-5">
   <h2 class="mb-4">Meus Contatos</h2>
+  <!-- index.html.erb -->
+  <%= link_to "Adicionar Novo Contato", new_contact_path, class: "btn btn-primary mb-3" %>    
 
   <!-- Tabela de contatos -->
   <table class="table table-striped table-hover">
@@ -22,17 +24,12 @@
           <td><%= contact.company %></td>
           <td><%= contact.position %></td>
           <td>
-            <%= link_to "Editar", edit_contact_path(contact), class: "btn btn-sm btn-warning" %>
-            <%= link_to "Excluir", contact, method: :delete, data: { confirm: "Tem certeza?" }, class: "btn btn-sm btn-danger" %>
+            <%= link_to "Mostrar", contact, class: "btn btn-success btn-sm" %>
+            <%= link_to "Editar", edit_contact_path(contact), class: "btn btn-warning btn-sm" %>
+            <%= link_to "Excluir", contact_path(contact), data: { turbo_method: :delete, turbo_confirm: "Tem certeza?" }, class: "btn btn-danger btn-sm" %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
-  <hr class="my-4">
-
-  <!-- Formulário de novo contato -->
-  <h3>Adicionar Novo Contato</h3>
-  <%= render "form", contact: Contact.new %>
 </div>

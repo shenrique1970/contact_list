@@ -1,2 +1,6 @@
-<h1>Contacts#edit</h1>
-<%= render 'form', contact: @contact %>
+<div class="container mt-4">
+  <h2>Editar Contato</h2>
+
+  <%= render "form", contact: @contact %>
+  <%= link_to "Voltar", contacts_path, class: "btn btn-secondary mt-3" %>
+</div>
