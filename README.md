@@ -23,6 +23,9 @@ Things you may want to cover:
 
 * ...
 <img width="1365" height="650" alt="contact_list" src="https://github.com/user-attachments/assets/2342eb28-4daa-4c9c-a866-ecc0b6d40cdd" />
+<img width="1366" height="650" alt="contatc2" src="https://github.com/user-attachments/assets/fb560072-aad8-43c8-a320-7f7154bbc9c8" />
+
+
 
 rails new contact_list -d postgresql
 
