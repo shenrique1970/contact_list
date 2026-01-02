@@ -21,16 +21,25 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+()[]
+## inicio
 
+```
 rails new contact_list -d postgresql
 
 rails db:create
+```
 
-se o servidor travar
+
+## se o servidor travar
+```
 rm tmp/pids/server.pid
- bin/rails restart
+bin/rails restart
+```
 
+
+# model 
+```
 bin/rails generate model Contact \
   name:string \
   phone:string \
@@ -57,3 +66,4 @@ bin/rails db:migrate
 gem "bcrypt", "~> 3.1.7"
 
 bundle install
+```
