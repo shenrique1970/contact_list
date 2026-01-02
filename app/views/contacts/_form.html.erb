@@ -1,28 +1,26 @@
 <%= form_with(model: @contact, local: true, class: "needs-validation") do |form| %>
-  <div class="mb-2">
-    <%= form.label :name, "Nome", class: "form-label" %>
-    <%= form.text_field :name, class: "form-control", required: true %>
-  </div>
-
-  <div class="mb-2">
-    <%= form.label :email, "Email", class: "form-label" %>
-    <%= form.email_field :email, class: "form-control" %>
-  </div>
-
-  <div class="mb-2">
-    <%= form.label :phone, "Telefone", class: "form-label" %>
-    <%= form.telephone_field :phone, class: "form-control" %>
-  </div>
-
-  <div class="mb-2">
-    <%= form.label :company, "Empresa", class: "form-label" %>
-    <%= form.text_field :company, class: "form-control" %>
-  </div>
-
-  <div class="mb-2">
-    <%= form.label :position, "Cargo", class: "form-label" %>
-    <%= form.text_field :position, class: "form-control" %>
-  </div>
+  <table class="table table-bordered">
+    <tr>
+      <th><%= form.label :name, "Nome", class: "form-label" %></th>
+      <td><%= form.text_field :name, class: "form-control", required: true %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :email, "Email", class: "form-label" %></th>
+      <td><%= form.email_field :email, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :phone, "Telefone", class: "form-label" %></th>
+      <td><%= form.telephone_field :phone, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :company, "Empresa", class: "form-label" %></th>
+      <td><%= form.text_field :company, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :position, "Cargo", class: "form-label" %></th>
+      <td><%= form.text_field :position, class: "form-control" %></td>
+    </tr>
+  </table>
 
   <%= form.submit "Salvar", class: "btn btn-primary" %>
 <% end %>
