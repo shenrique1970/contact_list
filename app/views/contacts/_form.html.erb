@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: @contact, local: true, class: "needs-validation") do |form| %>
   <table class="table table-bordered">
     <tr>
@@ -20,7 +21,11 @@
       <th><%= form.label :position, "Cargo", class: "form-label" %></th>
       <td><%= form.text_field :position, class: "form-control" %></td>
     </tr>
+    
   </table>
 
-  <%= form.submit "Salvar", class: "btn btn-primary" %>
+  <%= salvar_e_voltar(form, contacts_path) %>
+  
 <% end %>
+</div>
+
