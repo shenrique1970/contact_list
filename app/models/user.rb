@@ -1,11 +1,21 @@
 class User < ApplicationRecord
-  # evita ataque haker as senhas de usuarios
   has_secure_password
+  before_save :email_downcase
 
-  # Relacionamento: um usuário tem muitos contatos
-  has_many :contacts, dependent: :destroy
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-  # Validações
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true, length: { maximum: 50 }
+  validates :password, length: { minimum: 6 }
+  validates :email, presence: true, length: { maximum: 255 },
+                                    format: { with: VALID_EMAIL_REGEX },
+                                    uniqueness: { case_sensitive: true }
+
+
+  has_many :contacts
+
+
+  private
+    def email_downcase
+      self.email.downcase!
+    end
 end
