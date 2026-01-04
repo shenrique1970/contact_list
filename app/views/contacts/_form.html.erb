@@ -1,31 +1,30 @@
-<div class="container">
-  <%= form_with(model: @contact, local: true, class: "needs-validation") do |form| %>
-    <table class="table table-bordered">
-      <tr>
-        <th><%= form.label :name, "Nome", class: "form-label" %></th>
-        <td><%= form.text_field :name, class: "form-control", required: true %></td>
-      </tr>
-      <tr>
-        <th><%= form.label :email, "Email", class: "form-label" %></th>
-        <td><%= form.email_field :email, class: "form-control" %></td>
-      </tr>
-      <tr>
-        <th><%= form.label :phone, "Telefone", class: "form-label" %></th>
-        <td><%= form.telephone_field :phone, class: "form-control" %></td>
-      </tr>
-      <tr>
-        <th><%= form.label :company, "Empresa", class: "form-label" %></th>
-        <td><%= form.text_field :company, class: "form-control" %></td>
-      </tr>
-      <tr>
-        <th><%= form.label :position, "Cargo", class: "form-label" %></th>
-        <td><%= form.text_field :position, class: "form-control" %></td>
-      </tr>
-      
-    </table>
-
-    <%= salvar_e_voltar(form, contacts_path) %>
+<%= form_with(model: @contact, local: true, class: "needs-validation") do |form| %>
+  <table class="table table-bordered">
+    <tr>
+      <th><%= form.label :name, "Nome", class: "form-label" %></th>
+      <td><%= form.text_field :name, class: "form-control", required: true %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :email, "Email", class: "form-label" %></th>
+      <td><%= form.email_field :email, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :phone, "Telefone", class: "form-label" %></th>
+      <td><%= form.telephone_field :phone, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :company, "Empresa", class: "form-label" %></th>
+      <td><%= form.text_field :company, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :position, "Cargo", class: "form-label" %></th>
+      <td><%= form.text_field :position, class: "form-control" %></td>
+    </tr>
     
-  <% end %>
-</div>
+  </table>
+
+  <%= salvar_e_voltar(form, contacts_path) %>
+  
+<% end %>
+
 
