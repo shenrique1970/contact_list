@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  # evita ataque haker as senhas de usuarios
   has_secure_password
 
   # Relacionamento: um usuário tem muitos contatos
